@@ -9,7 +9,7 @@ using namespace std;
 template <typename Object>
 class Stack : public SimpleList<Object>
 {
-public:										        // Because the functions were virtual in SimpleList, I can implement
+public:								// Because the functions were virtual in SimpleList, I can implement
 	void push(Object data);					// them specifically for the Stack class in this class declaration
 	Object pop();
 	Stack(string l) : SimpleList<Object>(l){};		// Constructor (Inherits from SimpleList)
@@ -19,7 +19,7 @@ public:										        // Because the functions were virtual in SimpleList, I 
 template <typename Object>
 void Stack<Object> :: push(Object data)
 {
-	SimpleList<Object> :: insertStart(data);			// Calls insertStart function from the SimpleList class template
+	SimpleList<Object> :: insertStart(data);		// Calls insertStart function from the SimpleList class template
 }
 
 
@@ -28,5 +28,5 @@ template <typename Object>
 Object Stack<Object> :: pop()
 {
 	return SimpleList<Object> :: removeStart();			// Calls removeStart function since the "start" of the 
-}														                      // stack is last element pushed onto it.  Therefore, removing 
-														                      // from the start is consistent with the LIFO nature
+}									// stack is last element pushed onto it.  Therefore, removing 
+									// from the start is consistent with the LIFO nature
