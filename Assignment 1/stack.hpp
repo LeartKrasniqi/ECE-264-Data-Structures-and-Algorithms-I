@@ -9,7 +9,7 @@ using namespace std;
 template <typename Object>
 class Stack : public SimpleList<Object>
 {
-public:								// Because the functions were virtual in SimpleList, I can implement
+public:							// Because the functions were virtual in SimpleList, I can implement
 	void push(Object data);					// them specifically for the Stack class in this class declaration
 	Object pop();
 	Stack(string l) : SimpleList<Object>(l){};		// Constructor (Inherits from SimpleList)
