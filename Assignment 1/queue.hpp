@@ -9,7 +9,7 @@ using namespace std;
 template <typename Object>
 class Queue : public SimpleList<Object>
 {
-public:								// Because the functions were virtual in SimpleList, I can implement
+public:							// Because the functions were virtual in SimpleList, I can implement
 	void push(Object data);					// them specifically for the Queue class in this class declaration
 	Object pop();
 	Queue(string l) : SimpleList<Object>(l){};		// Constructor (inherits from SimpleList)
